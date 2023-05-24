@@ -181,7 +181,7 @@
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(1193, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(220, 1073);
+            panel2.Size = new Size(220, 1050);
             panel2.TabIndex = 10;
             // 
             // panelMqttBroker
@@ -283,7 +283,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(1413, 1073);
+            ClientSize = new Size(1413, 1050);
             Controls.Add(listBoxStatusMessage);
             Controls.Add(listBoxReceivedMessage);
             Controls.Add(labelStatusMessage);
