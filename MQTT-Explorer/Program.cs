@@ -13,6 +13,7 @@ namespace MQTT_Explorer
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
             
+            //pushen juuuuungeee 
         }
     }
 }
