@@ -28,111 +28,313 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            textBoxSetMessage = new TextBox();
             textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            textBoxMqttBroker = new TextBox();
+            buttonConnect = new Button();
+            buttonDisconnect = new Button();
+            labelMqttBroker = new Label();
+            labelSetTopic = new Label();
+            labelMessage = new Label();
+            panel1 = new Panel();
+            label5 = new Label();
+            pictureBox1 = new PictureBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            panel2 = new Panel();
+            panelMqttBroker = new Panel();
+            panelTopic = new Panel();
+            panelSubscribe = new Panel();
+            textBoxSubscriberTopic = new TextBox();
+            labelSubscriberTopic = new Label();
+            labelReceivedMessage = new Label();
+            labelStatusMessage = new Label();
+            listBoxReceivedMessage = new ListBox();
+            listBoxStatusMessage = new ListBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelMqttBroker.SuspendLayout();
+            panelTopic.SuspendLayout();
+            panelSubscribe.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxSetMessage
             // 
-            textBox1.Location = new Point(32, 50);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(164, 23);
-            textBox1.TabIndex = 0;
+            textBoxSetMessage.Location = new Point(25, 224);
+            textBoxSetMessage.Margin = new Padding(4, 5, 4, 5);
+            textBoxSetMessage.Name = "textBoxSetMessage";
+            textBoxSetMessage.Size = new Size(233, 31);
+            textBoxSetMessage.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(266, 50);
+            textBox2.Location = new Point(25, 116);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 23);
+            textBox2.Size = new Size(195, 31);
             textBox2.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxMqttBroker
             // 
-            textBox3.Location = new Point(651, 50);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(146, 23);
-            textBox3.TabIndex = 2;
+            textBoxMqttBroker.Location = new Point(35, 116);
+            textBoxMqttBroker.Margin = new Padding(4, 5, 4, 5);
+            textBoxMqttBroker.Name = "textBoxMqttBroker";
+            textBoxMqttBroker.Size = new Size(207, 31);
+            textBoxMqttBroker.TabIndex = 2;
             // 
-            // button1
+            // buttonConnect
             // 
-            button1.Location = new Point(32, 103);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 29);
-            button1.TabIndex = 3;
-            button1.Text = "Verbindung herstellen";
-            button1.UseVisualStyleBackColor = true;
+            buttonConnect.Location = new Point(35, 195);
+            buttonConnect.Margin = new Padding(4, 5, 4, 5);
+            buttonConnect.Name = "buttonConnect";
+            buttonConnect.Size = new Size(234, 48);
+            buttonConnect.TabIndex = 3;
+            buttonConnect.Text = "Verbindung herstellen";
+            buttonConnect.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonDisconnect
             // 
-            button2.Location = new Point(32, 163);
-            button2.Name = "button2";
-            button2.Size = new Size(164, 29);
-            button2.TabIndex = 4;
-            button2.Text = "Verbindung abbrechen";
-            button2.UseVisualStyleBackColor = true;
+            buttonDisconnect.Location = new Point(35, 276);
+            buttonDisconnect.Margin = new Padding(4, 5, 4, 5);
+            buttonDisconnect.Name = "buttonDisconnect";
+            buttonDisconnect.Size = new Size(234, 48);
+            buttonDisconnect.TabIndex = 4;
+            buttonDisconnect.Text = "Verbindung abbrechen";
+            buttonDisconnect.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelMqttBroker
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(32, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(77, 15);
-            label1.TabIndex = 5;
-            label1.Text = "MQTT-Broker";
+            labelMqttBroker.AutoSize = true;
+            labelMqttBroker.ForeColor = SystemColors.AppWorkspace;
+            labelMqttBroker.Location = new Point(35, 72);
+            labelMqttBroker.Margin = new Padding(4, 0, 4, 0);
+            labelMqttBroker.Name = "labelMqttBroker";
+            labelMqttBroker.Size = new Size(117, 25);
+            labelMqttBroker.TabIndex = 5;
+            labelMqttBroker.Text = "MQTT-Broker";
+            labelMqttBroker.Click += label1_Click;
             // 
-            // label2
+            // labelSetTopic
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(266, 32);
-            label2.Name = "label2";
-            label2.Size = new Size(108, 15);
-            label2.TabIndex = 6;
-            label2.Text = "Festlegen der Topic";
+            labelSetTopic.AutoSize = true;
+            labelSetTopic.ForeColor = SystemColors.AppWorkspace;
+            labelSetTopic.Location = new Point(25, 72);
+            labelSetTopic.Margin = new Padding(4, 0, 4, 0);
+            labelSetTopic.Name = "labelSetTopic";
+            labelSetTopic.Size = new Size(164, 25);
+            labelSetTopic.TabIndex = 6;
+            labelSetTopic.Text = "Festlegen der Topic";
             // 
-            // label3
+            // labelMessage
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(651, 32);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Subscribe-Topic";
+            labelMessage.AutoSize = true;
+            labelMessage.ForeColor = SystemColors.AppWorkspace;
+            labelMessage.Location = new Point(25, 183);
+            labelMessage.Margin = new Padding(4, 0, 4, 0);
+            labelMessage.Name = "labelMessage";
+            labelMessage.Size = new Size(86, 25);
+            labelMessage.TabIndex = 7;
+            labelMessage.Text = "Nachricht";
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = Color.LightBlue;
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(-7, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1419, 78);
+            panel1.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.HighlightText;
+            label5.Location = new Point(62, 26);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(138, 32);
+            label5.TabIndex = 6;
+            label5.Text = "Connection";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(11, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(44, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(1193, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(220, 1073);
+            panel2.TabIndex = 10;
+            // 
+            // panelMqttBroker
+            // 
+            panelMqttBroker.Controls.Add(textBoxMqttBroker);
+            panelMqttBroker.Controls.Add(buttonDisconnect);
+            panelMqttBroker.Controls.Add(labelMqttBroker);
+            panelMqttBroker.Controls.Add(buttonConnect);
+            panelMqttBroker.Location = new Point(809, 133);
+            panelMqttBroker.Name = "panelMqttBroker";
+            panelMqttBroker.Size = new Size(361, 384);
+            panelMqttBroker.TabIndex = 11;
+            // 
+            // panelTopic
+            // 
+            panelTopic.Controls.Add(labelSetTopic);
+            panelTopic.Controls.Add(labelMessage);
+            panelTopic.Controls.Add(textBox2);
+            panelTopic.Controls.Add(textBoxSetMessage);
+            panelTopic.Location = new Point(415, 133);
+            panelTopic.Name = "panelTopic";
+            panelTopic.Size = new Size(361, 384);
+            panelTopic.TabIndex = 12;
+            // 
+            // panelSubscribe
+            // 
+            panelSubscribe.Controls.Add(textBoxSubscriberTopic);
+            panelSubscribe.Controls.Add(labelSubscriberTopic);
+            panelSubscribe.Location = new Point(21, 133);
+            panelSubscribe.Name = "panelSubscribe";
+            panelSubscribe.Size = new Size(361, 384);
+            panelSubscribe.TabIndex = 13;
+            // 
+            // textBoxSubscriberTopic
+            // 
+            textBoxSubscriberTopic.Location = new Point(35, 116);
+            textBoxSubscriberTopic.Margin = new Padding(4, 5, 4, 5);
+            textBoxSubscriberTopic.Name = "textBoxSubscriberTopic";
+            textBoxSubscriberTopic.Size = new Size(207, 31);
+            textBoxSubscriberTopic.TabIndex = 2;
+            // 
+            // labelSubscriberTopic
+            // 
+            labelSubscriberTopic.AutoSize = true;
+            labelSubscriberTopic.ForeColor = SystemColors.AppWorkspace;
+            labelSubscriberTopic.Location = new Point(35, 72);
+            labelSubscriberTopic.Margin = new Padding(4, 0, 4, 0);
+            labelSubscriberTopic.Name = "labelSubscriberTopic";
+            labelSubscriberTopic.Size = new Size(141, 25);
+            labelSubscriberTopic.TabIndex = 5;
+            labelSubscriberTopic.Text = "Subscriber Topic";
+            // 
+            // labelReceivedMessage
+            // 
+            labelReceivedMessage.AutoSize = true;
+            labelReceivedMessage.ForeColor = SystemColors.AppWorkspace;
+            labelReceivedMessage.Location = new Point(949, 545);
+            labelReceivedMessage.Margin = new Padding(4, 0, 4, 0);
+            labelReceivedMessage.Name = "labelReceivedMessage";
+            labelReceivedMessage.Size = new Size(186, 25);
+            labelReceivedMessage.TabIndex = 14;
+            labelReceivedMessage.Text = "Empfangen der Daten";
+            labelReceivedMessage.Click += label6_Click;
+            // 
+            // labelStatusMessage
+            // 
+            labelStatusMessage.AutoSize = true;
+            labelStatusMessage.ForeColor = SystemColors.AppWorkspace;
+            labelStatusMessage.Location = new Point(519, 545);
+            labelStatusMessage.Margin = new Padding(4, 0, 4, 0);
+            labelStatusMessage.Name = "labelStatusMessage";
+            labelStatusMessage.Size = new Size(131, 25);
+            labelStatusMessage.TabIndex = 15;
+            labelStatusMessage.Text = "Statusmeldung";
+            labelStatusMessage.Click += label7_Click;
+            // 
+            // listBoxReceivedMessage
+            // 
+            listBoxReceivedMessage.FormattingEnabled = true;
+            listBoxReceivedMessage.ItemHeight = 25;
+            listBoxReceivedMessage.Location = new Point(665, 588);
+            listBoxReceivedMessage.Name = "listBoxReceivedMessage";
+            listBoxReceivedMessage.Size = new Size(470, 254);
+            listBoxReceivedMessage.TabIndex = 16;
+            listBoxReceivedMessage.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // listBoxStatusMessage
+            // 
+            listBoxStatusMessage.FormattingEnabled = true;
+            listBoxStatusMessage.ItemHeight = 25;
+            listBoxStatusMessage.Location = new Point(140, 588);
+            listBoxStatusMessage.Name = "listBoxStatusMessage";
+            listBoxStatusMessage.Size = new Size(510, 254);
+            listBoxStatusMessage.TabIndex = 17;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 644);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(1413, 1073);
+            Controls.Add(listBoxStatusMessage);
+            Controls.Add(listBoxReceivedMessage);
+            Controls.Add(labelStatusMessage);
+            Controls.Add(labelReceivedMessage);
+            Controls.Add(panelSubscribe);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            Controls.Add(panelMqttBroker);
+            Controls.Add(panelTopic);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
+            RightToLeft = RightToLeft.Yes;
+            RightToLeftLayout = true;
             Text = "MQTT Explorer";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelMqttBroker.ResumeLayout(false);
+            panelMqttBroker.PerformLayout();
+            panelTopic.ResumeLayout(false);
+            panelTopic.PerformLayout();
+            panelSubscribe.ResumeLayout(false);
+            panelSubscribe.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox textBoxSetMessage;
         private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
-        private Button button2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-
+        private TextBox textBoxMqttBroker;
+        private Button buttonConnect;
+        private Button buttonDisconnect;
+        private Label labelMqttBroker;
+        private Label labelSetTopic;
+        private Label labelMessage;
+        private Panel panel1;
+        private ContextMenuStrip contextMenuStrip1;
+        private Panel panel2;
+        private PictureBox pictureBox1;
+        public Panel panelMqttBroker;
+        private Label label5;
+        public Panel panelTopic;
+        public Panel panelSubscribe;
+        private TextBox textBoxSubscriberTopic;
+        private Label labelSubscriberTopic;
+        private Label labelReceivedMessage;
+        private Label labelStatusMessage;
+        private ListBox listBoxReceivedMessage;
+        private ListBox listBoxStatusMessage;
     }
 }
