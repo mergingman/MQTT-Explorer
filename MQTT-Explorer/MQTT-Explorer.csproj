@@ -10,9 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="MQTTnet" Version="4.2.0.706" />
-=======
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -25,7 +23,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
->>>>>>> 0941309a1bd3ab01c5fe00647143ce149bed507e
   </ItemGroup>
 
 </Project>
